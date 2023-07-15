@@ -201,7 +201,8 @@ body {
         align-items: center;
         justify-content: space-between;
         width: 20%;
-        div:first-child {
+        margin-right: 30px;
+        > div:first-child {
           > img:first-child {
             height: 45px;
             width: 45px;
@@ -213,7 +214,7 @@ body {
             border-radius: 100%;
           }
         }
-        div:last-child > p {
+        > div:last-child > p {
           color: $base-black;
           font-size: 14px;
           font-weight: bold;
@@ -223,6 +224,44 @@ body {
     }
     #hero {
       height: 50%;
+      display: flex;
+      > div:first-child {
+        margin-left: 60px;
+        margin-right: 20px;
+        align-items: center;
+        > img {
+          height: 45px;
+          width: 45px;
+          border: none;
+          border-radius: 100%;
+        }
+      }
+      > div:not(:first-child):not(:last-child) {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        > p {
+          color: $base-black;
+        }
+        > p:last-child {
+          font-weight: bold;
+        }
+      }
+      > div:last-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 15%;
+        margin-right: 100px;
+        > button {
+          margin-right: 25px;
+          padding: 10px;
+          border: none;
+          border-radius: 10%;
+          color: $base-black;
+          font-weight: bold;
+        }
+      }
     }
   }
   #content {
