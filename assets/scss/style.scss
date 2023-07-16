@@ -10,9 +10,10 @@ $base-black: black;
     padding: 0;
     color: white;
   }
+  html,
   body {
     display: flex;
-    height: 140vh;
+    height: 100%;
   }
 }
 
@@ -20,13 +21,12 @@ $base-black: black;
   width: 40vh;
   background-color: $base-black;
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   > div:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 22vh;
+    height: 17vh;
     > img {
       margin-right: 10px;
       height: 30px;
@@ -171,6 +171,7 @@ $base-black: black;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  height: 100%;
   width: 100%;
   #nav {
     height: 20vh;
@@ -268,7 +269,7 @@ $base-black: black;
   }
   #content {
     display: flex;
-    flex-grow: 1;
+    height: 100%;
     background-color: $light-gray;
     > div:first-child {
       height: 100%;
@@ -292,6 +293,7 @@ $base-black: black;
         padding-right: 25px;
         row-gap: 30px;
         column-gap: 30px;
+        margin-bottom: 100px;
         .card {
           height: 100%;
           width: 100%;
@@ -315,6 +317,7 @@ $base-black: black;
             justify-content: end;
             margin-right: 25px;
             margin-top: 25px;
+            margin-bottom: 20px;
             > img {
               margin-left: 20px;
               height: 25px;
@@ -325,6 +328,95 @@ $base-black: black;
       }
     }
     > div:last-child {
+      height: 100%;
+      width: 40%;
+      padding: 20px;
+      p {
+        color: $base-black;
+      }
+      > div:first-child {
+        height: 7%;
+        > p {
+          font-weight: bold;
+          font-size: 16px;
+          padding-left: 5px;
+          padding-bottom: 10px;
+        }
+      }
+      > div:nth-child(2) {
+        background-color: white;
+        padding: 20px;
+        border: none;
+        border-radius: 10px;
+        > div:first-child > p {
+          font-weight: bold;
+        }
+        > div:nth-child(2) {
+          font-size: 14px;
+          padding-bottom: 25px;
+          border-bottom: 2.5px solid rgb(190, 190, 190);
+        }
+        > div:nth-child(3) > p {
+          padding-top: 15px;
+          font-weight: bold;
+        }
+        > div:nth-child(4) {
+          font-size: 14px;
+          padding-bottom: 25px;
+          border-bottom: 2.5px solid rgb(190, 190, 190);
+        }
+        > div:nth-child(5) > p {
+          padding-top: 15px;
+          font-weight: bold;
+        }
+        > div:nth-child(6) {
+          font-size: 14px;
+        }
+      }
+
+      > div:last-child {
+        height: 50%;
+        > div:first-child {
+          height: 7%;
+          > p {
+            font-weight: bold;
+            font-size: 16px;
+            padding-left: 5px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+          }
+        }
+        > div:last-child {
+          background-color: white;
+          border-radius: 10px;
+          .bar {
+            .barNumber {
+              font-weight: bold;
+              margin-right: 10px;
+            }
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            > .barImg {
+              > img {
+                height: 40px;
+                width: 40px;
+                border-radius: 50px;
+              }
+            }
+            > .barContent {
+              display: flex;
+              flex-direction: column;
+              margin-left: 10px;
+              > div:first-child > p {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
