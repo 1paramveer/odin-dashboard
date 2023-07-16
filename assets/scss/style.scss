@@ -10,15 +10,17 @@ $base-black: black;
     padding: 0;
     color: white;
   }
+  body {
+    display: flex;
+    height: 140vh;
+  }
 }
-body {
-  display: flex;
-}
+
 #sidebar {
-  height: 100vh;
   width: 40vh;
   background-color: $base-black;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   > div:first-child {
     display: flex;
@@ -168,7 +170,7 @@ body {
 #main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  flex-grow: 1;
   width: 100%;
   #nav {
     height: 20vh;
@@ -191,7 +193,7 @@ body {
         }
         > div {
           height: 25px;
-          width: 100%;
+          width: 500px;
           background-color: $light-gray;
           border-radius: 30px;
         }
@@ -265,7 +267,64 @@ body {
     }
   }
   #content {
-    height: 100%;
+    display: flex;
+    flex-grow: 1;
     background-color: $light-gray;
+    > div:first-child {
+      height: 100%;
+      width: 70%;
+      > div:first-child {
+        > p {
+          color: $base-black;
+          margin-left: 20px;
+          padding-top: 20px;
+          padding-bottom: 10px;
+          font-weight: bold;
+        }
+      }
+      > div:last-child {
+        height: 85%;
+        width: 95%;
+        display: grid;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr;
+        place-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        row-gap: 30px;
+        column-gap: 30px;
+        .card {
+          height: 100%;
+          width: 100%;
+          background-color: white;
+          border-left: 10px solid $base-black;
+          border-radius: 10px;
+          > div:first-child {
+            padding-left: 20px;
+            padding-top: 20px;
+            > p:first-child {
+              color: $base-black;
+              font-weight: bold;
+            }
+            > p:last-child {
+              font-size: 0.9rem;
+              color: $base-black;
+            }
+          }
+          > div:last-child {
+            display: flex;
+            justify-content: end;
+            margin-right: 25px;
+            margin-top: 25px;
+            > img {
+              margin-left: 20px;
+              height: 25px;
+              width: 25px;
+            }
+          }
+        }
+      }
+    }
+    > div:last-child {
+    }
   }
 }
