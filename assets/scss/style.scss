@@ -284,7 +284,6 @@ $base-black: black;
         }
       }
       > div:last-child {
-        height: 85%;
         width: 95%;
         display: grid;
         grid-template: 1fr 1fr 1fr / 1fr 1fr;
@@ -293,7 +292,6 @@ $base-black: black;
         padding-right: 25px;
         row-gap: 30px;
         column-gap: 30px;
-        margin-bottom: 100px;
         .card {
           height: 100%;
           width: 100%;
@@ -316,8 +314,8 @@ $base-black: black;
             display: flex;
             justify-content: end;
             margin-right: 25px;
-            margin-top: 25px;
-            margin-bottom: 20px;
+            margin-top: 58px;
+            margin-bottom: 30px;
             > img {
               margin-left: 20px;
               height: 25px;
